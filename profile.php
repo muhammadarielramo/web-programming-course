@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if($_SESSION['role'] != 'user') {
+    session_destroy();
+    header('Location:index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +16,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Selamat datang admin</h1>
+    <h1>Selamat datang <?php echo $_SESSION['name'];?></h1>
+    <a href="./backend/logout.php">Logout</a>
+    
 </body>
 </html>
