@@ -34,7 +34,7 @@ if (isset($_POST['update'])) {
         <label>Nama Produk:</label>
         <input type="text" name="name" value="<?= $row['name']; ?>" required><br><br>
 
-        <label>Harg:</label>
+        <label>Harga:</label>
         <input type="text" name="price" value="<?= $row['price']; ?>" required><br><br>
 
         <label>Gambar URL:</label>
